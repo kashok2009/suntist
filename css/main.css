@@ -82,21 +82,6 @@ padding:0 10%;
 position: relative;
 margin-bottom: 70px;
 }
-.form-inline > .form-group,
-.form-inline > .btn {
-display: inline-block;
-margin-bottom: 0;
-}
-.form-help {
-margin-top: 0.125rem;
-margin-left: 0.125rem;
-color: #b3b3b3;
-font-size: 0.8rem;
-} 
-.form-radio .form-help {
-padding-top: 0.25rem;
-margin-top: -1rem;
-}
 .form-group input {
 height: 1.9rem;
 }
@@ -164,7 +149,7 @@ color: #337ab7;
 width: 100%;
 left: 0;
 }
-/* -- Data Table style -------------- */
+/* -- Data Table style-- */
 .table {
 width: 100%;
 max-width: 100%;

@@ -7,11 +7,16 @@ app.controller("SuntistController", ['$scope', function ($scope) {
 			'name': personalDetails.name,
 			'age': personalDetails.age,
 			'gender': personalDetails.gender,
+
+
 		});
+              /*Form reset*/
+             $scope.personalDetails.name = "";
+             $scope.personalDetails.age = "";    
+             $scope.personalDetails.gender = "";          
 
 	};
-
-
+ 
 }]);
 
 

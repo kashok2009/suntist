@@ -12,7 +12,7 @@
          <h1>SUNTIST</h1>
       </div>
       <!-- Form Data Start -->
-      <form id="suntForm"   ng-submit="addNew(personalDetails)">
+      <form id="suntForm" name="suntForm"  ng-submit="addNew(personalDetails)">
          <div class="form-group">
             <input type="text" required="required" ng-model="personalDetails.name" required"/>
             <label class="control-label" for="input" >Enter your name</label><i class="bar"></i>
@@ -38,7 +38,7 @@
             </div>
          </div>
          <div class="button-submit">
-            <input type="submit" value="Submit"/>    
+            <input type="submit"  ng-click="resetForm()" value="Submit"/>    
          </div>
       </form>
 
