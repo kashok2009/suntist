@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Suntist- Online Test</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+   </head>
+   <body ng-app="suntist" ng-controller="SuntistController">
+      <div class="top_header">
+         <h1>SUNTIST</h1>
+      </div>
+      <!-- Form Data Start -->
+      <form id="suntForm"   ng-submit="addNew(personalDetails)">
+         <div class="form-group">
+            <input type="text" required="required" ng-model="personalDetails.name" required"/>
+            <label class="control-label" for="input" >Enter your name</label><i class="bar"></i>
+         </div>
+         <div class="form-group">
+            <input type="number" ng-model="personalDetails.age" required/>
+            <label class="control-label" for="input" >Enter your age</label><i class="bar"></i>
+         </div>
+         <div class="form-radio">
+            <div class="radio__male">
+               <label class="control control--radio">
+                  <input type="radio" name="radio" ng-model="personalDetails.gender" value="male" name="gender" required/>
+                  <div class="control__indicator">
+                     Male
+                  </div>
+            </div>
+            <div class="radio__female">
+            <label class="control control--radio">
+            <input type="radio" name="radio" ng-model="personalDetails.gender" value="female" name="gender" required/> <div class="control__indicator">
+            Female
+            </div>
+            </label>
+            </div>
+         </div>
+         <div class="button-submit">
+            <input type="submit" value="Submit"/>    
+         </div>
+      </form>
+
+      <!-- End Form Data -->
+
+      <div class="personal__data">
+         <!-- Table starts here -->
+         <table class="rtable">
+            <thead>
+               <tr>
+                  <th width="40%">Name</th>
+                  <th width="30%">Age</th>
+                  <th width="30%">Sex</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr ng-repeat="personalDetail in personalDetails">
+                  <td>{{personalDetail.name}}</td>
+                  <td>{{personalDetail.age}}</td>
+                  <td>{{personalDetail.gender}}</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="about__sunt" ng-controller="aboutus">
+         <h2>  {{category}}</h2>
+         <p>   {{description}}</p>
+      </div>
+      <script src="js/main.js"></script>
+   </body>
+</html>
